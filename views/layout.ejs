@@ -1,0 +1,30 @@
+<!-- layout.ejs: plantilla base común para todas las vistas -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- <%= title %> mostrará el título que enviamos desde server.js -->
+  <title><%= title %></title>
+
+  <!-- Enlace a los estilos base -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <!-- Incluimos el encabezado (parcial reutilizable) -->
+  <%- include('partials/header') %>
+
+  <!-- Aquí se insertará el contenido específico de cada página -->
+  <main>
+    <%- body %>
+  </main>
+
+  <!-- Incluimos el pie de página (otro parcial reutilizable) -->
+  <%- include('partials/footer') %>
+
+</body>
+</html>
